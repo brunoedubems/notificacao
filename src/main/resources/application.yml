@@ -1,0 +1,25 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${SPRING_MAIL_USERNAME}
+    password: ${SPRING_MAIL_PASSWORD}
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 10000   # ms
+          timeout: 10000             # ms (read timeout)
+          writetimeout: 10000
+        debug: true
+server:
+  port: 8081
+
+envio:
+  email:
+    remetente: ${EMAIL_REMETENTE}
+    nomeRemetente: ${NOME_REMETENTE}
